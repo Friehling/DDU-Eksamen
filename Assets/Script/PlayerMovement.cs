@@ -85,11 +85,11 @@ public class PlayerMovement : MonoBehaviour
 
         // on ground
         if (grounded)
-            rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
+            rb.AddForce(10f * moveSpeed * moveDirection.normalized, ForceMode.Force);
 
         // in air
         else if (!grounded)
-            rb.AddForce(moveDirection.normalized * moveSpeed * 10f * airMultiplier, ForceMode.Force);
+            rb.AddForce(10f * moveSpeed * moveDirection.normalized * airMultiplier, ForceMode.Force);
     }
 
     private void SpeedControl()
