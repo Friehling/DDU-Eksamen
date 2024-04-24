@@ -4,21 +4,30 @@ using UnityEngine;
 
 public class TriggerChecker : MonoBehaviour
 {
-    public GameObject wall;
-    private void OnTriggerEnter(Collider other)
+    public float width = 2.5f;
+    public float height = 2.5f;
+    public float depth = 2.5f;
+    void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Trigger")
+        // Check if the other GameObject has a BoxCollider component
+        BoxCollider boxCollider = other.GetComponent<BoxCollider>();
+        if (boxCollider != null)
         {
+            Vector3 size2 = new Vector3(width, height, depth);
+            // Get the size of the box collider
+            Vector3 size1 = other.transform.localScale;
+
             
-            wall.SetActive(false);
+            if (size1 == size2 )
+            {
+                Debug.Log("Equal");
+            }      
         }
+        
     }
 
-    private void OnTriggerExit(Collider other)
+    void OnTriggerExit(Collider other)
     {
-        if(other.tag == "Trigger")
-        {
-            wall.SetActive(true);
-        }
+        Debug.ClearDeveloperConsole();
     }
 }
