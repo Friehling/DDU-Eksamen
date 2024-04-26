@@ -8,6 +8,7 @@ namespace test
     {
         DialogSystem ds;
         TextArchitect architect;
+        int index;
 
         string[] lines = new string[5]
         {
@@ -22,7 +23,7 @@ namespace test
         {
             ds = DialogSystem.instance;
             architect = new TextArchitect(ds.DialogContainer.TrueDialog);
-            architect.buildMethod = TextArchitect.BuildMethod.instant;
+            architect.buildMethod = TextArchitect.BuildMethod.typewriter ;
 
         }
 
@@ -31,7 +32,8 @@ namespace test
         {
             if(Input.GetKeyUp(KeyCode.Space)) 
             {
-                architect.Build(lines[Random.Range(0, lines.Length)]);
+                architect.Build(lines[index]);
+                index++;
             }
         }
     }

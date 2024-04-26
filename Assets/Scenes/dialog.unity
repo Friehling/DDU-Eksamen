@@ -1307,9 +1307,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DialogContainer:
-    Root: {fileID: 0}
-    NameCard: {fileID: 0}
-    TrueDialog: {fileID: 0}
+    Root: {fileID: 162133790}
+    NameCard: {fileID: 14560863}
+    TrueDialog: {fileID: 1878571316}
 --- !u!1 &841614026
 GameObject:
   m_ObjectHideFlags: 0

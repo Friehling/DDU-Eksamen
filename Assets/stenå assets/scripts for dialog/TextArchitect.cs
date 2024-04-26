@@ -1,21 +1,18 @@
 using System.Collections;
 using UnityEngine;
 using TMPro;
-using System.Security.Cryptography.X509Certificates;
-using static TextArchitect;
-using static UnityEngine.Rendering.DebugUI;
-using Unity.VisualScripting;
 
 public class TextArchitect 
 {
     private TextMeshProUGUI tmpro_ui;
     private TextMeshPro tmpro_world;
 
-    public TMP_Text tmpro => tmpro_ui!= null ? tmpro_ui : tmpro_world;
+    public TMP_Text tmpro => tmpro_ui != null ? tmpro_ui : tmpro_world;
+
+    public string currentText => tmpro.text;
     public string targetText { get; private set; } = "";
     public string preText { get; private set; } = "";
-
-    private int preTextLength = 0;
+     private int preTextLength = 0;
     public string fullTargetText => preText + targetText;
     public enum BuildMethod { instant, typewriter, fade}
     public BuildMethod buildMethod = BuildMethod.typewriter;
@@ -50,7 +47,7 @@ public class TextArchitect
         return buildProcess;
 
     }
-    public Coroutine append(string text)
+    public Coroutine Append(string text)
     {
         preText = tmpro.text;
         targetText = text;
@@ -91,12 +88,27 @@ public class TextArchitect
 
         }
 
-        Oncomplete();
+        OnComplete();
     }
 
-    private void Oncomplete()
+    private void OnComplete()
     {
         buildProcess = null;
+        hurryUp = false;
+    }
+
+    public void ForceComplete()
+    {
+        switch(buildMethod)
+        {
+            case BuildMethod.typewriter:
+                tmpro.maxVisibleCharacters = tmpro.textInfo.characterCount;
+                break;
+                case BuildMethod.fade:
+                break;
+        }
+        Stop();
+        OnComplete();
     }
     private void Prepare()
     {
@@ -127,6 +139,7 @@ public class TextArchitect
         tmpro.color = tmpro.color;
         tmpro.maxVisibleCharacters = 0;
         tmpro.text = preText;
+       
         if (preText != "")
         {
             tmpro.ForceMeshUpdate();
@@ -140,7 +153,7 @@ public class TextArchitect
     {
 
     }
-    private IEnumerable Build_Typewriter()
+    private IEnumerator Build_Typewriter()
     {
         while(tmpro.maxVisibleCharacters < tmpro.textInfo.characterCount)
         {
