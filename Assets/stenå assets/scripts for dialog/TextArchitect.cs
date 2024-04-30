@@ -11,7 +11,10 @@ public class TextArchitect
     private TextMeshProUGUI tmpro_ui;
     private TextMeshPro tmpro_world;
 
-    public TMP_Text tmpro => tmpro_ui!= null ? tmpro_ui : tmpro_world;
+    public TMP_Text tmpro => tmpro_ui != null ? tmpro_ui : tmpro_world;
+
+    public string currentText => tmpro.text;
+
     public string targetText { get; private set; } = "";
     public string preText { get; private set; } = "";
 
@@ -50,7 +53,7 @@ public class TextArchitect
         return buildProcess;
 
     }
-    public Coroutine append(string text)
+    public Coroutine Append(string text)
     {
         preText = tmpro.text;
         targetText = text;
@@ -91,14 +94,31 @@ public class TextArchitect
 
         }
 
-        Oncomplete();
+        OnComplete();
     }
 
-    private void Oncomplete()
+    private void OnComplete()
     {
         buildProcess = null;
+        hurryUp = false;
     }
-    private void Prepare()
+    public void ForceComplete()
+    {
+        switch (buildMethod)
+        {
+            case BuildMethod.typewriter:
+                tmpro.maxVisibleCharacters = tmpro.textInfo.characterCount;
+                break;
+            case BuildMethod.fade:
+                break;
+        }
+        Stop();
+        OnComplete();
+    }
+    
+      
+
+        private void Prepare()
     {
         switch(buildMethod)
         {
@@ -140,7 +160,7 @@ public class TextArchitect
     {
 
     }
-    private IEnumerable Build_Typewriter()
+    private IEnumerator Build_Typewriter()
     {
         while(tmpro.maxVisibleCharacters < tmpro.textInfo.characterCount)
         {

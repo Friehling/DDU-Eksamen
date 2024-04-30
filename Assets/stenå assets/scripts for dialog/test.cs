@@ -29,7 +29,7 @@ namespace test
         {
             ds = DialogSystem.instance;
             architect = new TextArchitect(ds.DialogContainer.TrueDialog);
-            architect.buildMethod = TextArchitect.BuildMethod.instant;
+            architect.buildMethod = TextArchitect.BuildMethod.typewriter;
 
         }
 
