@@ -11,7 +11,7 @@ public class TriggerController : MonoBehaviour
     {
         
         triggercount++;
-        if (triggercount == 4)
+        if (triggercount == 5)
         {
             Debug.Log("The door opens");
             GameObject.SetActive(false);
