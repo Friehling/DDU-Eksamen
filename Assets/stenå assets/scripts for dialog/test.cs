@@ -10,19 +10,30 @@ namespace test
         TextArchitect architect;
         public int stringIndex;
         public float waitAmount;
-        public GameObject image;
+        public GameObject Rawimage1;
+        public GameObject Rawimage2;
         bool isWaiting;
 
 
         string[] lines = new string[]
         {
-             "This is a random line of dialogue",
-            "I want to say something, come over here",
-            "The world is a crazy place sometimes.",
-              "Don't lose hope, things will get better!",
-            "It's a bird? It's a plane? No! It's Super Sheltie!",
-            "JEG ER EN DUM KØTER",
-            "JEG VIL GERNE HJEM"
+             "lyden af et vækkeur." +
+            "                                                                                               why now just a little bit more." +
+            "                                                                              sound continues." +
+            "                                                                                               erh why now.",
+
+            "what happened last night.",
+              "looking at his phone he sees that the clock is past 9 and gets up from bed!",
+            "what." +
+            "                                                                                                            how is it past 9 i was meant to get op at 8!",
+            "he goes to turn of the alarm but is overvalued by a pukish sensation, and get over to a sink" +
+            "                                                                                                           fuck, what happend last night",
+            "damit" +
+            "                                                                               he gets dressed and rushes out the door, " +
+            "                                                                                           The rain is pouring down and the trafik is stuck.",
+             "he puts up his hood and runs the distance sluggish doe to his hangover",
+            ""
+
         };
         // Start is called before the first frame update
         void Start()
@@ -42,28 +53,44 @@ namespace test
                 if(stringIndex == 5)
                 {
 
-                    StartCoroutine(WaitForImage());
+                    StartCoroutine(WaitForImage1());
+
+                }
+                else if(stringIndex==20)
+                {
+                    StartCoroutine(WaitForImage2());
 
                 }
                 else
                 {
-                architect.Build(lines[stringIndex]);
+                    architect.Build(lines[stringIndex]);
 
                 }
             }
+           
         }
-        
 
-
-
-        IEnumerator WaitForImage()
+        IEnumerator WaitForImage1()
         {
             isWaiting = true;
-            image.SetActive(true);
-            yield return new WaitForSeconds(waitAmount); 
-            image.SetActive(false);
+            Rawimage1.SetActive(true);
+            yield return new WaitForSeconds(waitAmount);
+            Rawimage1.SetActive(false);
             isWaiting = false;
             architect.Build(lines[stringIndex]);
+
+        }
+
+
+        IEnumerator WaitForImage2()
+        {
+            isWaiting = true;
+            Rawimage2.SetActive(true);
+            yield return new WaitForSeconds(waitAmount); 
+            Rawimage2.SetActive(false);
+            isWaiting = false;
+            architect.Build(lines[stringIndex]);
+
         }
     }
 
