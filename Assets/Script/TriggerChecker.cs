@@ -7,6 +7,8 @@ public class TriggerChecker : MonoBehaviour
     public float width = 2.5f;
     public float height = 2.5f;
     public float depth = 2.5f;
+    public TriggerController controller;
+
     void OnTriggerEnter(Collider other)
     {
         // Check if the other GameObject has a BoxCollider component
@@ -21,6 +23,8 @@ public class TriggerChecker : MonoBehaviour
             if (size1 == size2 )
             {
                 Debug.Log("Equal");
+                controller.ActivateTrigger();
+                
             }      
         }
         
@@ -29,5 +33,7 @@ public class TriggerChecker : MonoBehaviour
     void OnTriggerExit(Collider other)
     {
         Debug.ClearDeveloperConsole();
+        controller.DeactivateTrigger();
+
     }
 }
