@@ -14,10 +14,10 @@ using UnityEngine;
         bool isWaiting;
 
 
-        public string[] lines = new string[]
+        string[] lines = new string[]
         {
              "lyden af et vækkeur." +
-            "                                                                                               why now just a little bit more." +
+            "\nwhy now just a little bit more." +
             "                                                                              sound continues." +
             "                                                                                               erh why now.",
 
@@ -31,10 +31,16 @@ using UnityEngine;
             "                                                                               he gets dressed and rushes out the door, " +
             "                                                                                           The rain is pouring down and the trafik is stuck.",
              "he puts up his hood and runs the distance sluggish doe to his hangover",
-            ""
+           "why is this happening now of all days",
+           "i have to be on time or i'm done for" +
+            "\n the weather is normally not this bad the rain i making my hair fall down into my eyes and making it hard to see," +
+            "\n sounds of footsteps running in the water can be heard, but is suddenly replaced with a car using its horn and breaks  ",
 
         };
-        
+        public string[] getLines()
+    {
+        return lines;
+    }
         // Start is called before the first frame update
         void Start()
         {
@@ -56,7 +62,7 @@ using UnityEngine;
                     StartCoroutine(WaitForImage1());
 
                 }
-                else if(stringIndex==20)
+                else if(stringIndex==9)
                 {
                     StartCoroutine(WaitForImage2());
 

@@ -20,10 +20,10 @@ public class ChangeSceneOnArrayEnd : MonoBehaviour
     // This function is called when the button is clicked
     public void ChangeScene()
     {
-        if (otherScript != null && otherScript.lines != null && otherScript.lines.Length > 0)
+        if (otherScript != null && otherScript.getLines() != null && otherScript.getLines().Length > 0)
         {
             // Check if we've reached the end of the array
-            if (otherScript.stringIndex > otherScript.lines.Length)
+            if (otherScript.stringIndex > otherScript.getLines().Length)
             {
                 SceneManager.LoadScene(sceneName); // Load the specified scene
             }
