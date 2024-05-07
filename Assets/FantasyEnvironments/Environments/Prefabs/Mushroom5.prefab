@@ -13,6 +13,18 @@ PrefabInstance:
       value: Mushroom5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 42f444b29b33b59438c6975013d78d82, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 42f444b29b33b59438c6975013d78d82, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 42f444b29b33b59438c6975013d78d82, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 42f444b29b33b59438c6975013d78d82, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
