@@ -2,8 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace test
-{
+
     public class test : MonoBehaviour
     {
         DialogSystem ds;
@@ -15,7 +14,7 @@ namespace test
         bool isWaiting;
 
 
-        string[] lines = new string[]
+        public string[] lines = new string[]
         {
              "lyden af et vækkeur." +
             "                                                                                               why now just a little bit more." +
@@ -97,5 +96,5 @@ namespace test
 
 
 
-}
+
 
