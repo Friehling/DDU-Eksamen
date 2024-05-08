@@ -23619,7 +23619,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6135305687985615045, guid: 80cfbdda705e9b346b4128b58985a275, type: 3}
       propertyPath: moveSpeed
-      value: 60
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6135305687985615045, guid: 80cfbdda705e9b346b4128b58985a275, type: 3}
       propertyPath: playerHeight

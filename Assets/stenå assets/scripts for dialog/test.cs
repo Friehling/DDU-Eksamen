@@ -18,21 +18,21 @@ using UnityEngine;
         {
              "lyden af et vækkeur." +
             "\nwhy now just a little bit more." +
-            "                                                                              sound continues." +
-            "                                                                                               erh why now.",
+            "\nsound continues." +
+            "\nerh why now.",
 
             "what happened last night.",
               "looking at his phone he sees that the clock is past 9 and gets up from bed!",
             "what." +
-            "                                                                                                            how is it past 9 i was meant to get op at 8!",
+            "\nhow is it past 9 i was meant to get op at 8!",
             "he goes to turn of the alarm but is overvalued by a pukish sensation, and get over to a sink" +
-            "                                                                                                           fuck, what happend last night",
-            "damit" +
-            "                                                                               he gets dressed and rushes out the door, " +
-            "                                                                                           The rain is pouring down and the trafik is stuck.",
-             "he puts up his hood and runs the distance sluggish doe to his hangover",
-           "why is this happening now of all days",
-           "i have to be on time or i'm done for" +
+            "\nfuck, what happend last night",
+            "\ndamit" +
+            "\nhe gets dressed and rushes out the door, " +
+            "\nThe rain is pouring down and the trafik is stuck.",
+             "\nhe puts up his hood and runs the distance sluggish doe to his hangover",
+           "\nwhy is this happening now of all days",
+           "\ni have to be on time or i'm done for" +
             "\n the weather is normally not this bad the rain i making my hair fall down into my eyes and making it hard to see," +
             "\n sounds of footsteps running in the water can be heard, but is suddenly replaced with a car using its horn and breaks  ",
 
