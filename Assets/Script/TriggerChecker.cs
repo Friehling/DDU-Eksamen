@@ -18,14 +18,17 @@ public class TriggerChecker : MonoBehaviour
             Vector3 size2 = new Vector3(width, height, depth);
             // Get the size of the box collider
             Vector3 size1 = other.transform.localScale;
-
-            
-            if (size1 == size2 )
+            if (other.CompareTag("Trigger"))
             {
-                Debug.Log("Equal");
-                controller.ActivateTrigger();
+                if (size1 == size2)
+                {
+                    Debug.Log("Equal");
+                    controller.ActivateTrigger();
+
+                }
+            }
+            
                 
-            }      
         }
         
     }
