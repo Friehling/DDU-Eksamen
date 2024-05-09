@@ -16,31 +16,32 @@ using UnityEngine;
 
         string[] lines = new string[]
         {
-             "lyden af et vækkeur." +
-            "\nwhy now just a little bit more." +
-            "\nsound continues." +
-            "\nerh why now.",
+             "The sound of alarm going off." +
+            "\nWhy now just a little bit more." +
+            "\nSound continues." +
+            "\nErh why now.",
 
-            "what happened last night.",
-              "looking at his phone he sees that the clock is past 9 and gets up from bed!",
-            "what." +
-            "\nhow is it past 9 i was meant to get op at 8!",
-            "he goes to turn of the alarm but is overvalued by a pukish sensation, and get over to a sink" +
-            "\nfuck, what happend last night",
-            "\ndamit" +
-            "\nhe gets dressed and rushes out the door, " +
-            "\nThe rain is pouring down and the trafik is stuck.",
-             "\nhe puts up his hood and runs the distance sluggish doe to his hangover",
-           "\nwhy is this happening now of all days",
-           "\ni have to be on time or i'm done for" +
-            "\n the weather is normally not this bad the rain i making my hair fall down into my eyes and making it hard to see," +
-            "\n sounds of footsteps running in the water can be heard, but is suddenly replaced with a car using its horn and breaks  ",
+            "What happened last night.",
+              "Looking at his phone he sees that the clock is already past 9 and was supposed to get up from bed an hour ago!",
+            "What." +
+            "\nHow is it past 9 i was meant to get op at 8!",
+            "He goes to turn of the alarm but is overwhelmed by a pukish sensation, and runs to the nearest sink" +
+            "\nFuck, what happend last night",
+            "\nDamit" +
+            "\nHe gets dressed and rushes out of the door, " +
+            "\nthe rain is pouring down and the trafic is a mess.",
+             "\nHe puts up his hood and runs towards his workplace in a slow sluggish tempo do to his hangover from the drinking yesterday.",
+           "\nWhy is this happening now of all days,",
+           "\ni have to be on time or i'm done for." +
+            "\n The weather is normally not this bad the rain is making my hair fall down into my eyes and is making it hard for me to see." +
+            "\n The sounds of footsteps running in the water can be heard, but is suddenly replaced with a car using its horn and breaks",
+           
 
         };
         public string[] getLines()
-    {
+        {
         return lines;
-    }
+        }
         // Start is called before the first frame update
         void Start()
         {
@@ -95,7 +96,7 @@ using UnityEngine;
             yield return new WaitForSeconds(waitAmount); 
             Rawimage2.SetActive(false);
             isWaiting = false;
-            architect.Build(lines[stringIndex]);
+            //architect.Build(lines[stringIndex]);
 
         }
     }
