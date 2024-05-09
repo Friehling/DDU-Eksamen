@@ -6,9 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Dialog.unity
+    path: Assets/Scenes/dialog.unity
     guid: c757a9c9d55723b48a701ad1a3f158e0
   - enabled: 1
     path: Assets/Scenes/Map.unity
     guid: 13aec6ebc3404194694ce2d22704078d
+  - enabled: 1
+    path: Assets/Scenes/Tobias pf.unity
+    guid: 9c4911de36b25d6499500b88e65aece9
+  - enabled: 1
+    path: Assets/Scenes/EndScreen.unity
+    guid: a0afd33a63207bd4d9d0f05af899bdca
   m_configObjects: {}

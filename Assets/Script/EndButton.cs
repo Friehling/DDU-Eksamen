@@ -1,17 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class EndButton : MonoBehaviour
 {
     public GameObject button;
-    //public string sceneName;
-
+   
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
             button.SetActive(true);
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
         }
         
     }
@@ -21,6 +24,8 @@ public class EndButton : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             button.SetActive(false);
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
         }
     }
 }

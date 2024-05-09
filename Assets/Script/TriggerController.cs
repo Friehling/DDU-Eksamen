@@ -1,11 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class TriggerController : MonoBehaviour
 {
     public int triggercount = 0;
     public GameObject GameObject;
+    public TMP_Text textMeshPro;
+    public GameObject textContainer;
+
+   
 
     public void ActivateTrigger()
     {
@@ -13,17 +18,10 @@ public class TriggerController : MonoBehaviour
         triggercount++;
         if (triggercount == 5)
         {
-            Debug.Log("The door opens");
+            textContainer.SetActive(true);
             GameObject.SetActive(false);
+
         }
-    }
-    public void DeactivateTrigger()
-    {
-        if (triggercount > 0)
-        {
-            triggercount--;
-        }
-        
     }
     
 }
